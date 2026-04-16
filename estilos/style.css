@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+@media (max-wideth: 450px){
+  .Destaques {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+.roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+  :root {
+  --cor-principal: #e91e63;   /* rosa moderno */
+  --cor-secundaria: #9c27b0;  /* roxo elegante */
+  --cor-fundo: #cfcccd;       /* rosa bem claro */
+  --cor-card: #ffffff;
+  --cor-texto: #464545;
+}
+
+body {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.247), purple);
+  font-family: "ROBOTO";
+}
+
+header{
+    background-image: linear-gradient(to top,  rgba(0, 0, 0, 0.459), rgb(241, 149, 165));
+    color: var(--cor-texto);
+    padding: 4px;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+}
+
+header h1 {
+  margin-top: 5vw;
+  font-size: 7vw;
+  
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav li {
+  cursor: pointer;
+  padding-bottom: 3px;
+}
+
+.nav li:hover {
+  color:var(--cor-principal) ;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 2.5vw;
+}
+
+.logo img {
+  width: 98vw;
+  height: 35vw;
+
+  margin: auto;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+ h2 {
+  text-align: center;
+  font-size: 5vw;
+  background-image: linear-gradient(to right, gray, #9c27b0);
+  border-radius: 5px;
+}
+
+.Destaques{
+  
+  transition: 0.3s;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Destaques img {
+  width: 25vw;
+  height: 25vw;
+  padding: 42px;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.Destaques:hover {
+  transform: translateY(-10px)
+  
+}
+
+.Destaques:hover img {
+  transform: scale(1.05);
+}
+
+footer {
+  background-image:linear-gradient(to right, rgba(136, 135, 135, 0.658), var(--cor-secundaria)) ;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+}
