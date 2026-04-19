@@ -1,13 +1,26 @@
 @charset "UTF-8";
 
-@media (max-wideth: 450px){
+@media (max-wideth: 450px) {
+  /*quebra de imagens da class destaque*/
   .Destaques {
     flex-direction: column;
     align-items: center;
   }
 }
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+@media (max-width: 768px) {
+  .produtos {
+    grid-template-columns: repeat(2, 1fr); /* 2 por linha */
+  }
+}
+
+@media (max-width: 480px) {
+  .produtos {
+    grid-template-columns: 1fr; /* 1 por linha */
+  }
+}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">              /*font de texto*/
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
@@ -19,10 +32,10 @@
   font-variation-settings: "wdth" 100;
 }
 
-  :root {
-  --cor-principal: #e91e63;   /* rosa moderno */
-  --cor-secundaria: #9c27b0;  /* roxo elegante */
-  --cor-fundo: #cfcccd;       /* rosa bem claro */
+:root {
+  --cor-principal: #e91e63; /* rosa moderno */
+  --cor-secundaria: #9c27b0; /* roxo elegante */ /*variável de cores principais*/
+  --cor-fundo: #cfcccd; /* rosa bem claro */
   --cor-card: #ffffff;
   --cor-texto: #464545;
 }
@@ -32,19 +45,22 @@ body {
   font-family: "ROBOTO";
 }
 
-header{
-    background-image: linear-gradient(to top,  rgba(0, 0, 0, 0.459), rgb(241, 149, 165));
-    color: var(--cor-texto);
-    padding: 4px;
-    margin: auto;
-    text-align: center;
-    border-radius: 5px;
+header {
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.459),
+    rgb(241, 149, 165)
+  );
+  color: var(--cor-texto);
+  padding: 4px;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
 }
 
 header h1 {
   margin-top: 5vw;
   font-size: 5vw;
-  
 }
 
 .nav {
@@ -59,7 +75,7 @@ header h1 {
 }
 
 .nav li:hover {
-  color:var(--cor-principal) ;
+  color: var(--cor-principal);
 }
 
 nav a {
@@ -76,23 +92,26 @@ nav a {
 
   margin: auto;
   padding: 3px;
-  padding-right: 2px;
+  padding-right: 5px;
   border-radius: 10px;
 
   box-shadow: 2px 2px rgba(0, 0, 0, 0.432);
 }
 
-  h2 {
+h2 {
   text-align: center;
   font-size: 5vw;
-  background-image: linear-gradient(to right, rgba(128, 128, 128, 0.178), #9b27b09c);
+  background-image: linear-gradient(
+    to right,
+    rgba(128, 128, 128, 0.178),
+    #9b27b09c
+  );
   border-radius: 5px;
 
   box-shadow: 2px 2px rgba(0, 0, 0, 0.267);
 }
 
-.Destaques{
-  
+.Destaques {
   transition: 0.3s;
   border-radius: 10px;
   overflow: hidden;
@@ -110,8 +129,7 @@ nav a {
 }
 
 .Destaques:hover {
-  transform: translateY(-10px)
-  
+  transform: translateY(-10px);
 }
 
 .Destaques:hover img {
@@ -119,11 +137,17 @@ nav a {
 }
 
 footer {
-  background-image:linear-gradient(to right, rgba(136, 135, 135, 0.658), var(--cor-secundaria)) ;
+  background-image: linear-gradient(
+    to right,
+    rgba(136, 135, 135, 0.658),
+    var(--cor-secundaria)
+  );
   text-align: center;
   color: white;
   border-radius: 5px;
 }
+
+/*pagina "sobre"*/
 
 section {
   background-color: #9b27b05b;
@@ -154,6 +178,7 @@ section img {
 }
 
 form {
+  /*formulário do contato*/
   font-size: 3vw;
   display: flex;
   flex-direction: column;
@@ -162,4 +187,41 @@ form {
 
 label {
   padding: 5px;
+}
+textarea {
+  height: 120px;
+}
+
+ img {
+  width: 25vw;
+  height: auto;
+  border-radius: 10px;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  gap: 20px; /* espaço entre as imagens */
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  background-image: linear-gradient(
+    to right,
+    rgba(128, 128, 128, 0.39),
+    var(--cor-secundaria)
+  );
+  border-radius: 5px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.267);
+  padding: 10px;
+}
+.produtos h3 {
+  text-align: center;
+  background-color: white;
+}
+.produtos p {
+  background-color: white;
 }
