@@ -147,7 +147,7 @@ footer {
   border-radius: 5px;
 }
 
-/*pagina "sobre"*/
+                                                        /*pagina "sobre"*/
 
 section {
   background-color: #9b27b05b;
@@ -178,7 +178,7 @@ section img {
 }
 
 form {
-  /*formulário do contato*/
+                                             /*formulário do contato*/
   font-size: 3vw;
   display: flex;
   flex-direction: column;
@@ -193,18 +193,27 @@ textarea {
 }
 
  img {
-  width: 25vw;
+  width: 25vw;                      /*configuração para todas as imagens*/
   height: auto;
   border-radius: 10px;
 }
+
+                                                                    /*pagina de produtos*/
 
 .produtos {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 colunas */
   gap: 20px; /* espaço entre as imagens */
-  max-width: 900px;
   margin: auto;
+  padding-right: 10px;
   text-align: center;
+
+  transition: 0.3s;
+  overflow: hidden;  
+}
+
+.produtos img:hover {
+  transform: scale(1.1);             
 }
 
 .title {
@@ -221,7 +230,71 @@ textarea {
 .produtos h3 {
   text-align: center;
   background-color: white;
+  color: #6a1b9a;
+  margin: 10px 0 5px;
+  border-radius: 8px;
 }
 .produtos p {
-  background-color: white;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2e7d32; 
+  background: #f1f8e9;
+  padding: 5px 10px;
+  border-radius: 8px;
+  display: inline-block
 }
+
+                                                    /*pagina de venda*/
+
+.venda{
+   display: flex;
+   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  
+  background-color: white;
+  width: 600px;
+  height: auto;
+  margin: auto;
+  padding: 10px;
+}
+
+.venda img {
+   text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.venda h1 {
+   margin-bottom: 15px;
+  color: #333;
+}
+ .Preço{
+   font-size: 22px;
+  font-weight: bold;
+  color: #27ae60;
+  margin: 10px 0;
+ }
+ .descrição {
+    font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 20px;
+ }
+
+ .venda button {
+  background: linear-gradient(45deg, #ff4081, #7b1fa2);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.venda button:hover {
+  transform: scale(1.05);
+}
+
+ 
